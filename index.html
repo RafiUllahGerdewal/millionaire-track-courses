@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+      }
+      header {
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        padding: 1em;
+      }
+      .container {
+        margin: 20px auto;
+        max-width: 800px;
+        background: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .course-category {
+        padding: 15px;
+        border-bottom: 1px solid #ccc;
+        cursor: pointer;
+        background-color: #f1f1f1;
+      }
+      .course-category:hover {
+        background-color: #e0e0e0;
+      }
+      .course-details {
+        display: none;
+        padding: 10px;
+        background-color: #fafafa;
+      }
+      .course-details a {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 5px 10px;
+        background-color: #2196f3;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 0.9em;
+      }
+      .course-details a:hover {
+        background-color: #1976d2;
+      }
+      .cta {
+        text-align: center;
+        padding: 20px;
+      }
+      .cta p {
+        font-size: 1em;
+        margin: 10px 0;
+      }
+      .cta .enroll-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #ff5722;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      .cta .enroll-btn:hover {
+        background-color: #e64a19;
+      }
+      .contact-info {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .contact-info p {
+        margin: 5px 0;
+        font-size: 1em;
+      }
+      .contact-info a {
+        color: #4caf50;
+        text-decoration: none;
+      }
+      .contact-info a:hover {
+        text-decoration: underline;
+      }
+      .contact-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+      }
+      .contact-icons a {
+        color: #4caf50;
+        font-size: 1.5em;
+        text-decoration: none;
+      }
+      .contact-icons a:hover {
+        color: #388e3c;
+      }
+      h2 {
+        font-size: 1.1em;
+        color: #333;
+        font-weight: normal;
+      }
+      .testimonials {
+        padding: 20px;
+        background-color: #f5f5f5;
+        margin-top: 20px;
+        border-radius: 8px;
+      }
+      .testimonial {
+        font-style: italic;
+        margin: 15px 0;
+        color: #555;
+      }
+      .testimonial p {
+        margin: 5px 0;
+      }
+      .testimonial span {
+        font-weight: bold;
+      }
+    </style>
+    <script>
+      function toggleDetails(id) {
+        const details = document.getElementById(id);
+        details.style.display =
+          details.style.display === "block" ? "none" : "block";
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Explore Our Courses</h1>
+    </header>
+
+    <div class="container">
+      <h2 style="text-align: center">
+        Access more than 20 carefully designed courses taught by industry
+        experts and IT professors. These courses will help you develop valuable
+        skills in high-demand fields, unlocking exciting career opportunities.
+        As you learn, you also gain the ability to sell these courses and earn
+        with the support of a step-by-step guide. Millionaire Track is committed
+        to providing these high-quality courses to help you achieve your career
+        goals.
+      </h2>
+
+      <div class="course-category" onclick="toggleDetails('data-science')">
+        Data Science
+      </div>
+      <div id="data-science" class="course-details">
+        <ul>
+          <li>Power BI</li>
+          <li>Machine Learning</li>
+          <li>Python</li>
+          <li>Data Analytics/Data Science</li>
+          <li>CFD Aerospace</li>
+        </ul>
+      </div>
+
+      <div class="course-category" onclick="toggleDetails('finance')">
+        Finance Mastery
+      </div>
+      <div id="finance" class="course-details">
+        <ul>
+          <li>Stock Market</li>
+          <li>Option Trading</li>
+        </ul>
+      </div>
+
+      <div class="course-category" onclick="toggleDetails('online-marketing')">
+        Online Marketing
+      </div>
+      <div id="online-marketing" class="course-details">
+        <ul>
+          <li>Google Ads</li>
+          <li>Facebook Ads</li>
+          <li>LinkedIn Marketing</li>
+          <li>Microsoft Ads</li>
+          <li>YouTube Marketing</li>
+          <li>Email Marketing</li>
+        </ul>
+      </div>
+
+      <div class="course-category" onclick="toggleDetails('digital-marketing')">
+        Digital Marketing
+      </div>
+      <div id="digital-marketing" class="course-details">
+        <ul>
+          <li>Digital Marketing Mastery</li>
+        </ul>
+      </div>
+
+      <div class="course-category" onclick="toggleDetails('soft-skills')">
+        Soft Skills
+      </div>
+      <div id="soft-skills" class="course-details">
+        <ul>
+          <li>Communication Skills</li>
+          <li>Instagram Reels Mastery</li>
+          <li>Adobe Premiere Pro</li>
+          <li>Adobe Photoshop</li>
+        </ul>
+      </div>
+
+      <div class="course-category" onclick="toggleDetails('personal-branding')">
+        Personal Branding
+      </div>
+      <div id="personal-branding" class="course-details">
+        <ul>
+          <li>Instagram Marketing</li>
+          <li>Canva</li>
+        </ul>
+      </div>
+
+      <div class="cta">
+        <a
+          class="enroll-btn"
+          href="https://millionairetrack.com/register_id/unique_id=1734579642/mt_id=MT0002816783/package=15"
+          target="_blank"
+          >Enroll Now</a
+        >
+        <p>Get access to all the courses for less than ₹8999!</p>
+        <p style="font-size: 1.2em; color: #ff5722">
+          "Your future starts now—invest in yourself and learn the skills that
+          will set you apart."
+        </p>
+      </div>
+
+      <div class="testimonials">
+        <h3>What People Are Saying About Millionaire Track</h3>
+        <div class="testimonial">
+          <p>
+            "Millionaire Track changed my life! The courses are top-notch, and
+            the step-by-step guide to selling them helped me generate a steady
+            income while learning. It’s the best investment I've made in my
+            future!" <span>- John D., Data Science Professional</span>
+          </p>
+        </div>
+        <div class="testimonial">
+          <p>
+            "I’ve gained skills that directly boosted my career. Whether it’s
+            mastering Digital Marketing or becoming a Data Science expert,
+            Millionaire Track provides the knowledge and support to succeed in
+            high-demand fields." <span>- Sarah M., Digital Marketer</span>
+          </p>
+        </div>
+        <div class="testimonial">
+          <p>
+            "From beginner to expert, Millionaire Track has everything you need
+            to succeed. I not only learned valuable skills, but I also started
+            earning passive income by selling the courses. It's an unbeatable
+            opportunity!" <span>- David L., Entrepreneur & Freelancer</span>
+          </p>
+        </div>
+        <div class="testimonial">
+          <p>
+            "The training is hands-on, and the instructors are phenomenal! I got
+            practical knowledge I could apply immediately. If you're serious
+            about advancing your career and earning while learning, this is the
+            place to be." <span>- Emily K., Marketing Specialist</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-info">
+        <p>Learn how to earn money from this course content:</p>
+        <p>Contact: 9611790922</p>
+        <div class="contact-icons">
+          <a href="mailto:Rafi.zabi456@gmail.com" target="_blank" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a
+            href="https://instagram.com/4015rfiullah"
+            target="_blank"
+            title="Instagram"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+  </body>
+</html>
